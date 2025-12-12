@@ -1,8 +1,8 @@
 SELECT
   accounts.name,
-  transaction_journals.date,
+  transaction_journals.date AS time,
   transaction_journals.description,
-  transactions.amount
+  transactions.amount AS value
 FROM accounts
 JOIN transactions
   ON transactions.account_id = accounts.id
